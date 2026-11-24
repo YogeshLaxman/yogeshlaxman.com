@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  
-    <!-- Font Awesome -->
-    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="img/favicon.ico">
   <title>Yogesh Laxman</title>
-
- 
+  <meta name="description" content="Yogesh Laxman: backend engineer building distributed systems and AI platforms. Five years at AWS on CloudWatch, AWS's throttling service and Amazon Prime.">
+  <meta property="og:title" content="Yogesh Laxman">
+  <meta property="og:description" content="Backend engineer building distributed systems and AI platforms.">
+  <meta property="og:image" content="https://yogeshlaxman.com/img/2.jpg">
+  <link rel="icon" href="img/favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <!-- Header -->
@@ -18,17 +18,23 @@
     <div class="header container">
       <div class="nav-bar">
         <div class="brand">
-          <a href="#hero">
-            <img src="img/LogoS.png" class="container-logo" alt="..." class="img-thumbnail">
+          <a href="#hero" aria-label="Yogesh Laxman, back to top">
+            <!-- The YL logo: three strokes that fly in, hold, and fly out (style.css: .yl-*) -->
+            <svg class="yl-logo" viewBox="0 0 280 370" aria-hidden="true">
+              <polygon class="yl-short" points="0,0 60,0 127,118 98,168" />
+              <polygon class="yl-diag" points="218,2 279,2 68,369 7,369" />
+              <polygon class="yl-bar" points="117,322 279,322 252,369 91,369" />
+            </svg>
           </a>
         </div>
         <div class="nav-list">
           <div class="hamburger"><div class="bar"></div></div>
           <ul>
             <li><a href="#hero" data-after="Home">Home</a></li>
-            <li><a href="#services" data-after="Service">Skills</a></li>
-            <li><a href="#projects" data-after="Projects">Projects</a></li>
             <li><a href="#about" data-after="About">About</a></li>
+            <li><a href="#experience" data-after="Work">Experience</a></li>
+            <li><a href="#projects" data-after="Projects">Projects</a></li>
+            <li><a href="#services" data-after="Skills">Skills</a></li>
             <li><a href="#contact" data-after="Contact">Contact</a></li>
           </ul>
         </div>
@@ -37,66 +43,115 @@
   </section>
   <!-- End Header -->
 
-
-  <!-- Hero Section  -->
+  <!-- Hero Section -->
   <section id="hero">
     <div class="hero container">
       <div>
         <h1>Hi, <span></span></h1>
         <h1>I'm Yogesh <span></span></h1>
-        <h1>A passionate engineer <span></span></h1>
-        <a href="#projects" type="button" class="cta"><i class="fas fa-user"></i> Portfolio</a>
+        <h1>Backend engineer <span></span></h1>
+        <p class="hero-line">Building distributed systems and AI platforms. Five years at AWS on Tier-1 infrastructure: CloudWatch, AWS's throttling service and Amazon Prime. Now building agentic AI tools. Burnaby, BC.</p>
+        <div class="hero-buttons">
+          <a href="files/Yogesh_Laxman_Resume.pdf" class="cta"><i class="fas fa-file-pdf"></i> Résumé</a>
+          <a href="https://www.linkedin.com/in/yogesh-laxman/" class="cta"><i class="fab fa-linkedin"></i> LinkedIn</a>
+          <a href="https://github.com/YogeshLaxman" class="cta"><i class="fab fa-github"></i> GitHub</a>
+          <a href="mailto:yogesh.laxman@outlook.com" class="cta"><i class="fas fa-envelope"></i> Email</a>
+        </div>
       </div>
     </div>
   </section>
-  <!-- End Hero Section  -->
+  <!-- End Hero Section -->
 
-  <!-- Skill Section -->
-  <section id="services">
-    <div class="services container">
-      <div class="service-top">
-        <h1 class="section-title">Skills</h1>
-        <p>I am passionate about designing and developing mobile and web applications that make a difference.</p>
+  <!-- About Section -->
+  <section id="about">
+    <div class="about container">
+      <div class="col-left">
+        <div class="about-img">
+          <img src="./img/4.jpg" alt="Yogesh Laxman">
+        </div>
       </div>
-      <div class="service-bottom">
-        <div class="service-item">
-          <div class="icon"><p style="color:#1d1927;font-size:50pt;padding-top: 15px;"><i class="fas fa-code"></i></p></div>
-          <h2>Languages </h2>
-          
-          <p>C#, Java, C, C++, Elixir, SQL, Python, Solidity
-            <br>
-            <br>
-            <br>
-          </p>
-        </div>
-        <div class="service-item">
-          <div class="icon"><p style="color:#1d1927;font-size:50pt;padding-top: 15px;"><i class="fab fa-connectdevelop"></i></p></div>
-          <h2>Web Technologies</h2>
-          <p>HTML, CSS, JavaScript, JQuery, Redux, ES6, Bootstrap, Node, React, Angular, JSON
-            <br>
-            <br>
-          </p>
-        </div>
-        <div class="service-item">
-          <div class="icon"><p style="color:#1d1927;font-size:50pt;padding-top: 15px;"><i class="fas fa-database"></i></p></div>
-          <h2>Databases</h2>
-          <p>MySQL, Oracle, PostgreSQL, MongoDB
-            <br>
-            <br>
-            <br>
-          </p>
-        </div>
-        <div class="service-item">
-          <div class="icon"><p style="color:#1d1927;font-size:50pt;padding-top: 15px;"><i class="fas fa-object-group"></i></p></div>
-          <h2>Frameworks</h2>
-          <p>Spring Boot, REST, GIT, Junit, AWS, Adobe Experience Manager, HP ALM, Selenium, UFT</p>
-          <br>
-          <br>
-        </div>
+      <div class="col-right">
+        <h1 class="section-title">About <span>me</span></h1>
+        <h2>Backend engineer · Distributed systems &amp; AI platforms</h2>
+        <p>I'm a backend engineer with five years at Amazon Web Services, working on systems other services depend on: AWS's throttling service, which protects AWS at over 6 million requests per second; CloudWatch Contributor Insights; and personalization for Amazon Prime.</p>
+        <p>My most recent AWS work was in AI-powered observability. I built the MCP server that traces how AWS's first generative-AI root-cause-analysis product reasons, across more than 100,000 LLM requests a day, and designed the launch monitoring for AI-powered CloudWatch Insights at re:Invent.</p>
+        <p>Outside work I build my own AI tools end to end: a multi-agent job-search platform, a planner that runs my calendar and inbox, and a Garmin watch app.</p>
+        <a href="files/Yogesh_Laxman_Resume.pdf" download class="cta">Download Résumé</a>
       </div>
     </div>
   </section>
-  <!-- End Service Section -->
+  <!-- End About Section -->
+
+  <!-- Highlights Section -->
+  <section id="highlights">
+    <div class="highlights">
+      <div class="stat"><strong>6M+</strong><span>requests per second protected by AWS's throttling service</span></div>
+      <div class="stat"><strong>100K+</strong><span>LLM requests a day traced for AI root-cause analysis</span></div>
+      <div class="stat"><strong>62%</strong><span>fewer high-severity incidents on CloudWatch Contributor Insights</span></div>
+      <div class="stat"><strong>20K</strong><span>requests per second for Prime personalization</span></div>
+    </div>
+  </section>
+  <!-- End Highlights Section -->
+
+  <!-- Experience Section -->
+  <section id="experience">
+    <div class="experience">
+      <h1 class="section-title">Experience</h1>
+
+      <div class="job">
+        <div class="job-head">
+          <h2>Amazon Web Services</h2>
+          <h3>Software Development Engineer II · 2024 – 2026</h3>
+        </div>
+        <h4>AWS CloudWatch: Contributor Insights and AI operations</h4>
+        <ul>
+          <li>Built an MCP server that records how AWS's first generative-AI root-cause-analysis product reasons and which tools it calls, across more than 100,000 LLM requests a day. The data feeds its accuracy evaluations.</li>
+          <li>Designed the launch monitoring for AI-powered CloudWatch Insights at re:Invent, tracking the accuracy of its AI tools across 7 services.</li>
+          <li>Led an operational-excellence push for Contributor Insights that cut weekly high-severity incidents by 62%; other CloudWatch teams adopted the approach.</li>
+          <li>Built a load-testing framework that proved Contributor Insights could handle 3x the traffic for a DynamoDB launch and found 10x headroom.</li>
+        </ul>
+        <h4>AWS Throttling Service</h4>
+        <ul>
+          <li>Built central tracking of client versions for the service that protects AWS infrastructure at more than 6 million requests per second: 30,000+ client versions now visible automatically, which made the move to a version 10x more efficient possible.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-head">
+          <h2>Amazon Web Services</h2>
+          <h3>Software Development Engineer I, Amazon Prime · 2021 – 2024</h3>
+        </div>
+        <ul>
+          <li>Designed a privacy-compliant (GDPR and CCPA) personalization library for Prime sign-ups at 20,000 requests per second; caching cut infrastructure costs by $33K a year.</li>
+          <li>Merged three overlapping ranking systems into one library: 94% less duplication, no customer impact.</li>
+          <li>Built a parallel batch job on AWS Fargate that cleaned up more than 900 million records (about 130 GB, 15% lower storage cost).</li>
+          <li>Received an organization-level Bias for Action award for a Prime launch.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-head">
+          <h2>University of Florida</h2>
+          <h3>Research assistant · 2020 – 2021</h3>
+        </div>
+        <ul>
+          <li>Construction safety VR training for OSHA- and NSF-funded studies; participants' safety knowledge rose 41%. Acknowledged in a published ASCE 2021 paper.</li>
+          <li>Added speech recognition to a virtual-patient simulator used to train medical students, cutting the team's manual effort by 40%.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-head">
+          <h2>Earlier</h2>
+        </div>
+        <ul>
+          <li><b>Gaily Gaming</b>, co-founder (2018 – 2019): lead programmer, artist and composer for Crystal Chittra, a block-breaker game for Android.</li>
+          <li><b>Accenture</b>, Associate Software Engineer (2016 – 2018): moved manual testing of healthcare software to Selenium automation, cutting 240 hours to 48 per release and saving about $40K each time.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <!-- End Experience Section -->
 
   <!-- Projects Section -->
   <section id="projects">
@@ -107,157 +162,156 @@
       <div class="all-projects">
         <div class="project-item">
           <div class="project-info">
-            <h1>Crystal Chitra</h1>
-            <h2>C#</h2>
-            <p> Published a Block Breaker game on Android store using Unity3D as the game engine. Created all game
-              assets, animations, and videos using Blender and composed custom music and sounds using FL Studio.</p>
+            <h1>Scout</h1>
+            <h2>AI job-search platform · TypeScript, Next.js, PostgreSQL, MCP, Claude</h2>
+            <p>Specialized LLM agents handle discovery, research, tailoring and outreach through a 12-tool MCP server, with a person reviewing every step. Scans company hiring boards (Greenhouse, Ashby, Lever) and fills application forms only from recorded answers, never guessing. Cut each application from about 15 minutes to a 1-minute review.</p>
           </div>
-          <div  class="project-img">
+          <div class="project-img project-icon"><i class="fas fa-magnifying-glass"></i></div>
+        </div>
+        <div class="project-item">
+          <div class="project-info">
+            <h1>Aayu</h1>
+            <h2>AI planner and mail assistant · Next.js, PostgreSQL, Prisma, Claude, Connect IQ</h2>
+            <p>A multi-user planner that lays out each person's day on their own Google Calendar every morning, with a watch app and a mail agent. Self-hosted on a home server behind a Cloudflare Tunnel.</p>
+          </div>
+          <div class="project-img project-icon"><i class="fas fa-calendar-check"></i></div>
+        </div>
+        <div class="project-item">
+          <div class="project-info">
+            <h1>VO2 max on the watch</h1>
+            <h2>Garmin Connect IQ · Monkey C</h2>
+            <p>A Garmin Forerunner app that estimates VO2 max from heart rate and pace during a test run, with four methods to choose from.</p>
+          </div>
+          <div class="project-img project-icon"><i class="fas fa-heart-pulse"></i></div>
+        </div>
+        <div class="project-item">
+          <div class="project-info">
+            <h1>Crystal Chittra</h1>
+            <h2>Android game · Unity, C#, Blender, FL Studio</h2>
+            <p>A block-breaker game for Android. I wrote the code, made the art and animations, and composed the music.</p>
+          </div>
+          <div class="project-img">
             <a href="https://github.com/YogeshLaxman/CrystalChitra">
-              <img src="./img/cc.jpg" alt="img">
-            </a>
-          </div>
-        </div>
-        <div class="project-item">
-          <div class="project-info">
-            <h1>Carjacking Simultion</h1>
-            <h2>C#</h2>
-            <p>A simulation of that checks a user's reaction towards a car jacking. Every action of the user leads to a different response by the simulated car jacker.</p>
-          </div>
-          <div class="project-img">
-            <a href="https://github.com/YogeshLaxman/CarjackingSimulation">
-              <img src="./img/cjs.PNG" alt="img">
-            </a>
-          </div>
-        </div>
-        <div class="project-item">
-          <div class="project-info">
-            <h1>Distributed Operating System Applications</h1>
-            <h2>Elixir</h2>
-            <p>Modeled backend of Twitter-based engine using Elixir and
-              frontend using Phoenix web framework. Performed Push-sum and Gossip communication protocols using Elixir on 2D grid, 3D
-              torus grid and honeycomb topologies. Implemented ‘Tapestry P2P Network’ using distributed hash tables based on research paper</p>
-          </div>
-          <div class="project-img">
-            <a href="https://github.com/YogeshLaxman/Twitter-Pheonix-Web-Framework">
-              <img src="./img/t.png" alt="img">
-            </a>
-          </div>
-        </div>
-        <div class="project-item">
-          <div class="project-info">
-            <h1>Blockchain-based M&A Smart Contracts </h1>
-            <h2>Solidity</h2>
-            <p>Implemented a smart contract for merger and acquisitions using Solidity. Worked with JavaScript, HTML/CSS for the front-end as well as Node.js and web3.js, an Ethereum JavaScript API, to interact with smart contracts.</p>
-          </div>
-          <div class="project-img">
-            <a href="https://github.com/YogeshLaxman/Blockchain-Implementation-MandA">
-              <img src="./img/maa.png" alt="img">
-            </a>
-          </div>
-        </div>
-        <div class="project-item">
-          <div class="project-info">
-            <h1>Database Systems Implementation</h1>
-            <h2>C++</h2>
-            <p>Devised a single-user DBMS in C++ that supports a subset of SQL. Implemented heap and file sort to manage database records through relational algebra operations.</p>
-          </div>
-          <div class="project-img">
-            <a href="https://github.com/YogeshLaxman/database-systems-implementation">
-              <img src="./img/DBInew.png" alt="img">
-            </a>
-          </div>
-        </div>
-        <div class="project-item">
-          <div class="project-info">
-            <h1>BitTorrent P2P Simulator</h1>
-            <h2>Java</h2>
-            <p>Built a BitTorrent P2P simulator by implementing TCP connection and socket-programming to distribute file chunks by the choking/unchoking mechanism between peers.</p>
-          </div>
-          <div class="project-img">
-            <a href="https://github.com/YogeshLaxman/Peer-To-Peer">
-              <img src="./img/P2Pnew.png" alt="img">
+              <img src="./img/cc.jpg" alt="Crystal Chittra">
             </a>
           </div>
         </div>
       </div>
+      <p class="older-work">Older work: distributed-systems coursework from the University of Florida (BitTorrent and Tapestry simulators, a Twitter-like engine in Elixir, a small SQL database in C++, blockchain contracts) is <a href="https://github.com/YogeshLaxman?tab=repositories">on GitHub</a>.</p>
     </div>
   </section>
   <!-- End Projects Section -->
 
-  <!-- About Section -->
-  <section id="about">
-    <div class="about container">
-      <div class="col-left">
-        <div class="about-img">
-          <img src="./img/4.jpg" alt="img">
-        </div>
+  <!-- Skills Section -->
+  <section id="services">
+    <div class="services container">
+      <div class="service-top">
+        <h1 class="section-title">Skills</h1>
       </div>
-      <div class="col-right">
-        <h1 class="section-title">About <span>me</span></h1>
-        <h2>Mobile and Web Applications Developer</h2>
-        <p>I am a graduate student pursuing my Masters in Computer Science from University of Florida. Currently, I am conducting research under Dr. Lok on Virtual Reality, HCI and Machine Learning to facilitate social interactions using virtual humans and studying participant interaction with virtual patients. I also have three years of work experience in the field of software engineering coupled with the domain expertise in healthcare and digital marketing.</p>
-        <a href="files/Resume - Yogesh Laxman_01.20.pdf" download class="cta">Download Resume</a>
+      <div class="service-bottom">
+        <div class="service-item">
+          <div class="icon"><i class="fas fa-code"></i></div>
+          <h2>Languages</h2>
+          <p>Java, TypeScript, Python, Rust</p>
+        </div>
+        <div class="service-item">
+          <div class="icon"><i class="fas fa-network-wired"></i></div>
+          <h2>Distributed systems</h2>
+          <p>Microservices, event-driven architecture, load testing, operational excellence</p>
+        </div>
+        <div class="service-item">
+          <div class="icon"><i class="fab fa-aws"></i></div>
+          <h2>AWS</h2>
+          <p>Lambda, DynamoDB, Kinesis, EventBridge, S3, SNS, SQS, Fargate, CloudWatch</p>
+        </div>
+        <div class="service-item">
+          <div class="icon"><i class="fas fa-robot"></i></div>
+          <h2>AI</h2>
+          <p>LLM orchestration, agentic workflows, MCP, RAG, vector databases</p>
+        </div>
+        <div class="service-item">
+          <div class="icon"><i class="fas fa-database"></i></div>
+          <h2>Data</h2>
+          <p>PostgreSQL, DynamoDB, MySQL, Elasticsearch, GraphQL</p>
+        </div>
+        <div class="service-item">
+          <div class="icon"><i class="fas fa-screwdriver-wrench"></i></div>
+          <h2>Tools</h2>
+          <p>Spring Boot, Guice, Docker, Kubernetes, CI/CD, Next.js</p>
+        </div>
       </div>
     </div>
   </section>
-  <!-- End About Section -->
+  <!-- End Skills Section -->
+
+  <!-- Education Section -->
+  <section id="education">
+    <div class="education">
+      <h1 class="section-title">Education <span>&amp; recognition</span></h1>
+      <div class="edu-items">
+        <div class="edu-item">
+          <i class="fas fa-graduation-cap"></i>
+          <h2>University of Florida</h2>
+          <p>M.S. Computer Science, 2019 – 2021<br>GPA 3.86 · UF Academic Achievement Award</p>
+        </div>
+        <div class="edu-item">
+          <i class="fas fa-graduation-cap"></i>
+          <h2>Maharaja Agrasen Institute of Technology</h2>
+          <p>B.Tech Computer Science, GGSIPU<br>2012 – 2016</p>
+        </div>
+        <div class="edu-item">
+          <i class="fas fa-award"></i>
+          <h2>AWS Bias for Action award</h2>
+          <p>Organization level, 2021<br>for a Prime launch</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Education Section -->
 
   <!-- Contact Section -->
   <section id="contact">
     <div class="contact container">
       <div><h1 class="section-title">Contact <span>info</span></h1></div>
       <div class="contact-items">
-        <div class="contact-item">
-          <div class="icon"><p style="color:#1d1927;font-size:50pt;padding-top: 15px;"><i class="fas fa-phone"></i></p></div>
-          <div class="contact-info">
-            <h1>Phone</h1>
-            <h2>+1 352 870 8778</h2>
-          </div>
-        </div>
-        <div class="contact-item">
-          <div class="icon"><p style="color:#1d1927;font-size:50pt;padding-top: 15px;"><i class="fas fa-envelope"></i></p></div>
+        <a class="contact-item" href="mailto:yogesh.laxman@outlook.com">
+          <div class="icon"><i class="fas fa-envelope"></i></div>
           <div class="contact-info">
             <h1>Email</h1>
-            <h2>yogesh.laxman@ufl.edu</h2>
             <h2>yogesh.laxman@outlook.com</h2>
           </div>
-        </div>
-        <div class="contact-item">
-          <div class="icon"><p style="color:#1d1927;font-size:50pt;padding-top: 15px;"><i class="fas fa-map-marker-alt"></i></p></div>
+        </a>
+        <a class="contact-item" href="https://www.linkedin.com/in/yogesh-laxman/">
+          <div class="icon"><i class="fab fa-linkedin"></i></div>
           <div class="contact-info">
-            <h1>Address</h1>
-            <h2>Gainesville, Florida</h2>
+            <h1>LinkedIn</h1>
+            <h2>in/yogesh-laxman</h2>
+          </div>
+        </a>
+        <div class="contact-item">
+          <div class="icon"><i class="fas fa-location-dot"></i></div>
+          <div class="contact-info">
+            <h1>Location</h1>
+            <h2>Burnaby, BC, Canada</h2>
           </div>
         </div>
       </div>
     </div>
   </section>
   <!-- End Contact Section -->
-  <section id="ParallaxLogo">
-
-  </section>
-  <!-- Parallax Logo Section -->
-
-
-  <!-- End Parallax Logo Section -->
 
   <!-- Footer -->
   <section id="footer">
     <div class="footer container">
-      <!-- <p style="color:#1d1927;font-size:50pt;"> -->
-        <p>
-        <span>
-          <a class="link" href="https://github.com/YogeshLaxman" ><i class="fab fa-github-square"></i></a>
-        </span>
-        <span><a class="link" href="https://www.youtube.com/playlist?list=PLNJuJ2heX4m0irNwKZitY4riKwgpd19qJ"><i class="fab fa-youtube"></i></a></span>
-        <span><a class="link" href="https://www.linkedin.com/in/yogesh-laxman/"><i class="fab fa-linkedin"></i></a></span>
+      <p>
+        <a class="link" href="https://github.com/YogeshLaxman" aria-label="GitHub"><i class="fab fa-github-square"></i></a>
+        <a class="link" href="https://www.youtube.com/playlist?list=PLNJuJ2heX4m0irNwKZitY4riKwgpd19qJ" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a class="link" href="https://www.linkedin.com/in/yogesh-laxman/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
       </p>
-      <p>Copyright © 2020 Yogesh. All rights reserved</p>
+      <p>© 2026 Yogesh Laxman</p>
     </div>
   </section>
   <!-- End Footer -->
-
 
   <script src="./app.js"></script>
 </body>

@@ -5,6 +5,9 @@
 	box-sizing: border-box;
 }
 html {
+	color-scheme: light;
+	background-color: white;
+	color: black;
 	font-size: 10px;
 	font-family: 'Montserrat', sans-serif;
 	scroll-behavior: smooth;
@@ -45,11 +48,43 @@ p {
 	color: #1d1927;
 }
 
-.container-logo {
-	background: transparent;
-	margin: 80%;
-    object-position: 50% 50%;
-    width: 30px;    
+/* The YL logo in the header: its three strokes fly in, hold as the logo, fly out, and repeat */
+.brand a {
+	display: block;
+	padding: 10px 20px;
+}
+.yl-logo {
+	display: block;
+	height: 44px;
+	width: auto;
+	overflow: hidden;
+}
+.yl-logo polygon {
+	fill: #e6e6e6;
+	animation: 7s cubic-bezier(.33, 1, .68, 1) infinite both;
+}
+.yl-logo .yl-diag { animation-name: yl_diag; }
+.yl-logo .yl-short { animation-name: yl_short; animation-delay: .12s; }
+.yl-logo .yl-bar { animation-name: yl_bar; animation-delay: .24s; }
+@keyframes yl_diag {
+	0% { transform: translate(250px, -434px); }
+	10%, 78% { transform: translate(0, 0); }
+	88%, 100% { transform: translate(-250px, 434px); }
+}
+@keyframes yl_short {
+	0% { transform: translate(-247px, -435px); }
+	10%, 78% { transform: translate(0, 0); }
+	88%, 100% { transform: translate(-247px, -435px); }
+}
+@keyframes yl_bar {
+	0% { transform: translate(500px, 0); }
+	10%, 78% { transform: translate(0, 0); }
+	88%, 100% { transform: translate(-500px, 0); }
+}
+@media (prefers-reduced-motion: reduce) {
+	.yl-logo polygon { animation: none; }
+	#hero h1, #hero h1 span, #hero .hero-line, #hero .hero-buttons { animation: none !important; color: white; opacity: 1; }
+	#hero h1:nth-child(3) { color: #1d1927; font-weight: 500; }
 }
 
 .cta {
@@ -284,7 +319,156 @@ p {
 	animation-delay: 2.5s;
 }
 
+#hero .hero-line {
+	max-width: 560px;
+	color: white;
+	font-size: 1.7rem;
+	font-weight: 400;
+	line-height: 2.8rem;
+	margin-top: 20px;
+	text-shadow: 0 1px 6px rgba(0, 0, 0, .55);
+	opacity: 0;
+	animation: fade_in .8s ease forwards;
+	animation-delay: 3.6s;
+}
+#hero .hero-buttons {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 12px;
+	opacity: 0;
+	animation: fade_in .8s ease forwards;
+	animation-delay: 4s;
+}
+#hero .hero-buttons .cta {
+	margin-top: 20px;
+	font-size: 1.5rem;
+	padding: 10px 20px;
+	background-color: rgba(29, 25, 39, .55);
+}
+#hero .hero-buttons .cta:hover {
+	background-color: #1d1927;
+}
+/* Phones: the text sits on the photo, so dim it and keep every line light */
+@media only screen and (max-width: 767px) {
+	#hero::after {
+		background-color: rgba(0, 0, 0, .45);
+	}
+	#hero h1:nth-child(3) {
+		animation-name: text_reveal_light;
+	}
+	#hero .hero-buttons .cta {
+		font-size: 1.3rem;
+		padding: 8px 14px;
+	}
+}
+@keyframes text_reveal_light {
+	100% {
+		color: #dfe3e8;
+		font-weight: 500;
+	}
+}
 /* End Hero Section */
+
+/* Highlights */
+#highlights {
+	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+}
+#highlights .highlights {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 60px 20px;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+	gap: 30px;
+	text-align: center;
+}
+#highlights strong {
+	display: block;
+	color: white;
+	font-size: 5rem;
+	font-weight: 700;
+}
+#highlights span {
+	display: block;
+	color: #d7dbe0;
+	font-size: 1.5rem;
+	line-height: 2.2rem;
+	margin-top: 8px;
+}
+/* End Highlights */
+
+/* Experience */
+#experience .experience {
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 100px 20px;
+}
+#experience .section-title {
+	margin-bottom: 40px;
+}
+#experience .job {
+	padding: 30px;
+	margin-bottom: 30px;
+	border-left: 6px solid #1d1927;
+	box-shadow: 0px 0px 18px 0 #0000002c;
+	border-radius: 0 10px 10px 0;
+}
+#experience .job-head h2 {
+	font-size: 2.4rem;
+	font-weight: 700;
+}
+#experience .job-head h3 {
+	font-size: 1.6rem;
+	font-weight: 400;
+	color: #485563;
+	margin-top: 4px;
+}
+#experience h4 {
+	font-size: 1.6rem;
+	font-weight: 700;
+	margin-top: 20px;
+	color: #29323c;
+}
+#experience ul {
+	margin-top: 10px;
+	padding-left: 20px;
+}
+#experience li {
+	font-size: 1.5rem;
+	line-height: 2.5rem;
+	font-weight: 300;
+	margin-bottom: 6px;
+}
+/* End Experience */
+
+/* Education */
+#education .education {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 60px 20px 100px;
+}
+#education .edu-items {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+	gap: 30px;
+	margin-top: 40px;
+}
+#education .edu-item {
+	padding: 30px;
+	text-align: center;
+	border-radius: 10px;
+	box-shadow: 0px 0px 18px 0 #0000002c;
+}
+#education .edu-item i {
+	font-size: 4rem;
+	color: #1d1927;
+}
+#education .edu-item h2 {
+	font-size: 1.9rem;
+	font-weight: 500;
+	margin: 15px 0 5px;
+}
+/* End Education */
 
 /* Services Section */
 #services .services {
@@ -337,6 +521,11 @@ p {
 	max-width: 80px;
 	width: 100%;
 	margin-bottom: 20px;
+}
+#services .service-bottom .icon i {
+	font-size: 5rem;
+	color: rgba(255, 255, 255, .85);
+	padding-top: 15px;
 }
 #services .service-item h2 {
 	font-size: 2rem;
@@ -421,6 +610,42 @@ p {
 #projects .project-item:hover .project-img img {
 	transform: scale(1.1);
 }
+#projects .project-icon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-image: linear-gradient(60deg, #1d1927 0%, #29323c 100%);
+	min-height: 200px;
+	width: 100%;
+	flex: 1 1 50%;
+	align-self: stretch;
+}
+#projects .project-icon::after {
+	display: none;
+}
+#projects .project-icon i {
+	font-size: 10rem;
+	color: rgba(255, 255, 255, .8);
+	transition: .3s ease transform;
+}
+#projects .project-item:hover .project-icon i {
+	transform: scale(1.1);
+}
+#projects .project-img a {
+	display: block;
+	height: 100%;
+}
+#projects .older-work {
+	max-width: 800px;
+	margin: 40px auto 0;
+	padding: 0 20px;
+	text-align: center;
+}
+#projects .older-work a {
+	color: #1d1927;
+	font-weight: 700;
+	text-decoration: underline;
+}
 /* End Projects section */
 
 /* About Section */
@@ -496,6 +721,14 @@ p {
 }
 #contact .contact-item:hover {
 	box-shadow: 0px 0px 5px 0 #0000002c;
+}
+#contact a.contact-item {
+	color: inherit;
+}
+#contact .icon i {
+	font-size: 5rem;
+	color: #1d1927;
+	padding-top: 15px;
 }
 #contact .icon {
 	width: 70px;
@@ -602,6 +835,11 @@ p {
 	100% {
 		width: 0;
 		left: 100%;
+	}
+}
+@keyframes fade_in {
+	100% {
+		opacity: 1;
 	}
 }
 @keyframes text_reveal {
@@ -749,7 +987,7 @@ p {
 	/* End header */
 
 	#services .service-bottom .service-item {
-		flex-basis: 22%;
+		flex-basis: 30%;
 		margin: 1.5%;
 	}
 }
